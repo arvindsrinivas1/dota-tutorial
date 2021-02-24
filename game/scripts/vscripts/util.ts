@@ -60,10 +60,9 @@ export function setUnitVisibilityThroughFogOfWar(unit: CDOTA_BaseNPC, visible: b
     }
 }
 
-export function setUnitPacifist(unit: CDOTA_BaseNPC, isPacifist: boolean, duration?: number)
-{
+export function setUnitPacifist(unit: CDOTA_BaseNPC, isPacifist: boolean, duration?: number) {
     if (isPacifist) {
-        unit.AddNewModifier(undefined, undefined, "modifier_tutorial_pacifist", {duration: duration});
+        unit.AddNewModifier(undefined, undefined, "modifier_tutorial_pacifist", { duration: duration });
     }
     else {
         unit.RemoveModifierByName("modifier_tutorial_pacifist");
